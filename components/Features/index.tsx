@@ -11,8 +11,8 @@ const Features = () => {
       >
         <div className="container">
           <SectionTitle
-            title="Main Features"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title="Excel News and Updates"
+            paragraph="Webtechpool cover news related to Excel updates, new features, AI features, and best practices."
             center
           />
 

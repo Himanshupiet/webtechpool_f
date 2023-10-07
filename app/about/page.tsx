@@ -7,7 +7,7 @@ const AboutPage = () => {
     <>
       <Breadcrumb
         pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        description="Welcome to Webtechpool, your go-to destination for all things Excel! We're passionate about Microsoft Excel and dedicated to helping you unlock its full potential. Whether you're a beginner just starting your Excel journey or an experienced user looking to sharpen your skills, we're here to guide you every step of the way."
       />
       <AboutSectionOne />
       <AboutSectionTwo />

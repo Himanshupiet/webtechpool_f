@@ -24,8 +24,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title="Who We Are"
+                paragraph="We are a team of Excel enthusiasts who believe in the power of data and the incredible capabilities of Excel. Our mission is to demystify this versatile software and make it accessible to everyone. We understand that Excel can be a powerful tool for data analysis, visualization, and automation, and we're here to show you how."
                 mb="44px"
               />
 
@@ -35,15 +35,15 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List text="Comprehensive Tutorials" />
+                    <List text="Practical Tips" />
+                    <List text="Data Insights" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List text="Excel Formulas " />
+                    <List text="Excel new AI Tips" />
+                    <List text="Excel News and Updates" />
                   </div>
                 </div>
               </div>

@@ -6,8 +6,8 @@ const Blog = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Blog Grid"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="Blogs"
+        description="Microsoft Excel, the quintessential spreadsheet software, offers a powerful array of tools and functions that can help you transform raw data into valuable insights. In this blog post, we'll explore some essential tips and techniques for effective data analysis in Excel."
       />
 
       <section className="pt-[120px] pb-[120px]">

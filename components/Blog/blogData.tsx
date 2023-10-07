@@ -3,44 +3,44 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Best UI components for modern websites",
+    title: "Pivot Table",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Pivot table is very import tool or command in excel sheet. It helps to summarize our data very easily and we can modify it according to our requirement as per...",
     image: "/images/blog/blog-01.jpg",
     author: {
-      name: "Samuyl Joshi",
-      image: "/images/blog/author-01.png",
-      designation: "Graphic Designer",
+      name: "Anshu Kumar",
+      image: "/images/blog/anshu.webp",
+      designation: "Content Writer",
     },
-    tags: ["creative"],
+    tags: ["Pivot"],
     publishDate: "2025",
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
+    title: "10 Logical Operator",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Logical operators in Excel are essential tools for making decisions, performing comparisons, and filtering data within your spreadsheets.",
     image: "/images/blog/blog-02.jpg",
     author: {
-      name: "Musharof Chy",
-      image: "/images/blog/author-02.png",
+      name: "Anshu Kumar",
+      image: "/images/blog/anshu.webp",
       designation: "Content Writer",
     },
-    tags: ["computer"],
+    tags: ["Logical"],
     publishDate: "2025",
   },
   {
     id: 3,
-    title: "Tips to quickly improve your coding speed.",
+    title: "Excel AI Trick",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Artificial Intelligence (AI) is rapidly transforming how we work with data in Microsoft Excel. With AI features and tools integrated into the software.",
     image: "/images/blog/blog-03.jpg",
     author: {
-      name: "Lethium Deo",
-      image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      name: "Anshu Kumar",
+      image: "/images/blog/anshu.webp",
+      designation: "Content Writer",
     },
-    tags: ["design"],
+    tags: ["Excel AI Tips"],
     publishDate: "2025",
   },
 ];

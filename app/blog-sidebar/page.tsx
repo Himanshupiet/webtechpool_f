@@ -13,8 +13,7 @@ const BlogSidebarPage = () => {
             <div className="w-full px-4 lg:w-8/12">
               <div>
                 <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
-                  10 amazing sites to download stock photos & digital assets for
-                  free
+                Excel AI Trick: Simplify Data Entry with Smart Tags
                 </h2>
                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                   <div className="flex flex-wrap items-center">
@@ -22,7 +21,7 @@ const BlogSidebarPage = () => {
                       <div className="mr-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
                           <Image
-                            src="/images/blog/author-02.png"
+                            src="/images/blog/anshu.webp"
                             alt="author"
                             fill
                           />
@@ -31,7 +30,7 @@ const BlogSidebarPage = () => {
                       <div className="w-full">
                         <h4 className="mb-1 text-base font-medium text-body-color">
                           By
-                          <span> Musharof Chy</span>
+                          <span> Anshu Kumar</span>
                         </h4>
                       </div>
                     </div>
@@ -93,15 +92,13 @@ const BlogSidebarPage = () => {
                       href="#0"
                       className="inline-flex items-center justify-center rounded-full bg-primary py-2 px-4 text-sm font-semibold text-white"
                     >
-                      Design
+                      Excel AI
                     </a>
                   </div>
                 </div>
                 <div>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat.
+                  Do you want to streamline data entry, reduce errors, and improve the accuracy of your Excel spreadsheets? With Excel's AI-powered Smart Tags, you can achieve all of this and more. This nifty trick harnesses the power of Artificial Intelligence to assist you in entering data with remarkable ease.
                   </p>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
@@ -114,56 +111,98 @@ const BlogSidebarPage = () => {
                     </div>
                   </div>
                   <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Quis enim lobortis scelerisque fermentum. Neque
-                    sodales ut etiam sit amet. Ligula ullamcorper
                     <strong className="text-primary dark:text-white">
                       {" "}
-                      malesuada{" "}
+                      What are Smart Tags in Excel?{" "}
                     </strong>
-                    proin libero nunc consequat interdum varius. Quam
-                    pellentesque nec nam aliquam sem et tortor consequat.
-                    Pellentesque adipiscing commodo elit at imperdiet.
                   </p>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Semper auctor neque vitae tempus quam pellentesque nec.
-                    <span className="text-primary underline dark:text-white">
-                      {" "}
-                      Amet dictum sit amet justo{" "}
-                    </span>
-                    donec enim diam. Varius sit amet mattis vulputate enim nulla
-                    aliquet porttitor. Odio pellentesque diam volutpat commodo
-                    sed.
+                  Smart Tags are AI-driven features in Excel that recognize certain types of data as you enter it into a worksheet. They then provide context-aware options, suggestions, or automatic actions based on the recognized data. This can be especially helpful when dealing with dates, times, stock tickers, geographic locations, and more..
                   </p>
                   <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
-                    Digital marketplace for Ui/Ux designers.
+                  How to Use Smart Tags:
                   </h3>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    consectetur adipiscing elit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    mattis vulputate cupidatat.
-                  </p>
                   <ul className="mb-10 list-inside list-disc text-body-color">
                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                      Consectetur adipiscing elit in voluptate velit.
+                    <strong className="text-primary dark:text-white">
+                      {" "}
+                    Enable Smart Tags:
+                    </strong> To begin, make sure Smart Tags are enabled in your Excel settings. You can do this by going to 'File' &#8594; 'Options' &#8594; 'Proofing,' and then under 'AutoCorrect options,' select the 'Smart Tags' tab.
                     </li>
                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                      Mattis vulputate cupidatat.
+                    <strong className="text-primary dark:text-white">
+                      {" "}
+                      Enter Data:
+                    </strong> Start entering your data as you normally would. When Excel recognizes a pattern or type of data, it will underline it with a small blue underline.
                     </li>
                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                      Vulputate enim nulla aliquet porttitor odio pellentesque
+                    <strong className="text-primary dark:text-white">
+                      {" "}
+                      Activate Smart Tag:
+                    </strong> Hover over the underlined data, and a small purple tag icon will appear. Click on the tag to see a list of suggested actions or data-related tasks.
+                    </li>
+                  </ul>
+                  <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
+                    Examples of Smart Tag Usage:
+                  </h3>
+                  <ul>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <strong className="text-primary dark:text-white">
+                      {" "}
+                      Dates and Times: 
+                    </strong> If you enter a date, Excel's Smart Tags can format it correctly, create a calendar event, or perform calculations like adding or subtracting days.
                     </li>
                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                      Ligula ullamcorper malesuada proin
+                    <strong className="text-primary dark:text-white">
+                      {" "}
+                      Stock Tickers: 
+                    </strong> When you enter stock symbols, Smart Tags can provide information about the stock, including its current price, historical data, and more.
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <strong className="text-primary dark:text-white">
+                      {" "}
+                      Geographic Locations:
+                    </strong> For geographic locations, Smart Tags can display maps, weather information, or even provide directions.
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <strong className="text-primary dark:text-white">
+                      {" "}
+                      Financial Data:
+                    </strong> When you input financial data, such as currency symbols, Smart Tags can convert currencies, show exchange rates, and perform financial calculations..
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <strong className="text-primary dark:text-white">
+                      {" "}
+                      Contact Information: 
+                    </strong> Entering contact information can trigger Smart Tags to create Outlook contacts, schedule meetings, or perform other relevant actions.
+                    </li>
+                  </ul>
+                  <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
+                  Benefits of Using Smart Tags:
+                  </h3>
+                  <ul>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <strong className="text-primary dark:text-white">
+                      {" "}
+                      Efficiency:: 
+                    </strong> Smart Tags save time by automating data-related tasks and reducing the need for manual formatting or calculations.
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <strong className="text-primary dark:text-white">
+                      {" "}
+                      Accuracy:  
+                    </strong> hey help minimize errors, ensuring that data is entered and processed correctly.
+                    </li>
+                    <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
+                    <strong className="text-primary dark:text-white">
+                      {" "}
+                      Productivity:
+                    </strong> Smart Tags allow you to focus on data analysis and decision-making rather than routine data entry tasks.
                     </li>
                   </ul>
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <p className="text-center text-base font-medium italic text-body-color">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod incididunt utionals labore et dolore magna
-                      aliqua. Quis lobortis scelerisque fermentum, The Neque ut
-                      etiam sit amet.
+                    By incorporating this Excel AI trick into your workflow, you can significantly enhance your efficiency and data accuracy. Give it a try and experience the power of AI in simplifying data entry and enhancing your Excel experience.
                     </p>
                     <span className="absolute left-0 top-0 z-[-1]">
                       <svg
@@ -306,20 +345,20 @@ const BlogSidebarPage = () => {
                       </svg>
                     </span>
                   </div>
-                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  {/* <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     consectetur adipiscing elit in voluptate velit esse cillum
                     dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                     mattis vulputate cupidatat.
-                  </p>
+                  </p> */}
                   <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
                       <h5 className="mb-3 text-sm font-medium text-body-color">
                         Popular Tags :
                       </h5>
                       <div className="flex items-center">
-                        <TagButton text="Design" />
-                        <TagButton text="Development" />
-                        <TagButton text="Info" />
+                        <TagButton text="Excel" />
+                        <TagButton text="AI" />
+                        <TagButton text="Tricks" />
                       </div>
                     </div>
                     <div className="mb-5">
@@ -365,7 +404,7 @@ const BlogSidebarPage = () => {
                 <ul className="p-8">
                   <li className="mb-6 border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
                     <RelatedPost
-                      title="Best way to boost your online sales."
+                      title="Pivot Table"
                       image="/images/blog/post-01.jpg"
                       slug="#"
                       date="12 Feb 2025"
@@ -373,7 +412,7 @@ const BlogSidebarPage = () => {
                   </li>
                   <li className="mb-6 border-b border-body-color border-opacity-10 pb-6 dark:border-white dark:border-opacity-10">
                     <RelatedPost
-                      title="50 Best web design tips & tricks that will help you."
+                      title="10 Logical Operator"
                       image="/images/blog/post-02.jpg"
                       slug="#"
                       date="15 Feb, 2024"
@@ -381,7 +420,7 @@ const BlogSidebarPage = () => {
                   </li>
                   <li>
                     <RelatedPost
-                      title="The 8 best landing page builders, reviewed"
+                      title="Excel AI Trick"
                       image="/images/blog/post-03.jpg"
                       slug="#"
                       date="05 Jun, 2024"
@@ -399,7 +438,7 @@ const BlogSidebarPage = () => {
                       href="#0"
                       className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      Tailwind Templates
+                      Excel AI Tricks
                     </a>
                   </li>
                   <li>
@@ -407,7 +446,7 @@ const BlogSidebarPage = () => {
                       href="#0"
                       className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      Landing page
+                      Pivot Table
                     </a>
                   </li>
                   <li>
@@ -415,7 +454,7 @@ const BlogSidebarPage = () => {
                       href="#0"
                       className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      Startup
+                      Excel Formula
                     </a>
                   </li>
                   <li>
@@ -423,7 +462,7 @@ const BlogSidebarPage = () => {
                       href="#0"
                       className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      Business
+                      Excel Camera
                     </a>
                   </li>
                   <li>
@@ -431,7 +470,7 @@ const BlogSidebarPage = () => {
                       href="#0"
                       className="mb-3 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      Multipurpose
+                      Excel VBA script
                     </a>
                   </li>
                 </ul>
@@ -441,11 +480,11 @@ const BlogSidebarPage = () => {
                   Popular Tags
                 </h3>
                 <div className="flex flex-wrap py-6 px-8">
-                  <TagButton text="Themes" />
-                  <TagButton text="UI Kit" />
-                  <TagButton text="Tailwind" />
-                  <TagButton text="Startup" />
-                  <TagButton text="Business" />
+                  <TagButton text="Excel" />
+                  <TagButton text="AI" />
+                  <TagButton text="Tricks" />
+                  <TagButton text="Pivot" />
+                  <TagButton text="Formula" />
                 </div>
               </div>
 

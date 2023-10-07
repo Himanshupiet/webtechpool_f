@@ -8,7 +8,7 @@ const Blog = () => {
       <div className="container">
         <SectionTitle
           title="Our Latest Blogs"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Unlock the full potential of Excel with our latest blog posts on powerful Excel tricks. Discover time-saving shortcuts, expert tips for data analysis, and innovative ways to supercharge your spreadsheet skills. Whether you're a beginner or an Excel pro, our blogs have something for everyone. Dive in and elevate your Excel game today"
           center
         />
 
