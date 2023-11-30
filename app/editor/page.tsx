@@ -6,10 +6,6 @@ import dynamic from 'next/dynamic';
 import { useState } from "react";
 
 import 'react-quill/dist/quill.snow.css';
-const DynamicComponentWithNoSSR = dynamic(
-  () => import('../../components/TextEditorNext'),
-  { ssr: false }
-  )
   const DynamicComponentWithNoSSR2 = dynamic(
     () => import('../../components/TextEditor'),
     { ssr: false }
