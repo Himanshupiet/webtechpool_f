@@ -1,6 +1,12 @@
+"use client"
 import Link from "next/link";
 
 const SignupPage = () => {
+  const handleSubmit=(e:any)=>{
+    e.preventDefault()
+console.log("REACT_APP_IMAGE_UPLOAD_BASE_URL",process.env.REACT_APP_IMAGE_UPLOAD_BASE_URL)
+
+  }
   return (
     <>
       <section className="relative z-10 overflow-hidden pt-36 pb-16 md:pb-20 lg:pt-[180px] lg:pb-28">
@@ -148,7 +154,7 @@ const SignupPage = () => {
                     </label>
                   </div>
                   <div className="mb-6">
-                    <button className="flex w-full items-center justify-center rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+                    <button className="flex w-full items-center justify-center rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp" onClick={handleSubmit}>
                       Sign up
                     </button>
                   </div>
