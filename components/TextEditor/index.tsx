@@ -1,13 +1,10 @@
 "use client"
 import {uploadFile} from '@/app/services/helper';
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-//import ReactQuill, {Quill} from 'react-quill';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import 'react-quill/dist/quill.snow.css';
 import dynamic from 'next/dynamic';
 const ReactQuill = dynamic(async() => await import("react-quill"), { ssr: false });
 import ResizeModule from "@botom/quill-resize-module";
-//import ResizeModule from "quill-blot-formatter";
-// RQ.Quill.register("modules/blotFormatter", BF);
 import { Quill } from "react-quill";
 const BaseImage = Quill.import('formats/image');
 const BaseVideo = Quill.import('formats/video');
@@ -77,7 +74,6 @@ export interface EditorProps {
   content: any;
   onUpdate(e: any, length?: any): void;
 }
-
 
 const TextEditor = ({width,content, onUpdate}:EditorProps) => {
   const [value, setValue] = useState('');
@@ -172,11 +168,12 @@ const TextEditor = ({width,content, onUpdate}:EditorProps) => {
     return useCallback(() => isMounted.current, [])
   }
 
-  //console.log(value)
   return (
     <ReactQuill
         onChange={(value: any, _d:any, _s: any, e: any) => onUpdate(value, e?.getText().trim())}
-        style={{ width , height:'200px'}}
+        style={{ width , 
+          height:'200px'
+        }}
         modules={modules}
         value={content}
         theme="snow"

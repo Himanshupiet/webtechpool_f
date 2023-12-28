@@ -14,6 +14,7 @@ const blogData: Blog[] = [
     },
     tags: ["Pivot"],
     publishDate: "2025",
+    slugTitle:''
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const blogData: Blog[] = [
     },
     tags: ["Logical"],
     publishDate: "2025",
+    slugTitle:''
   },
   {
     id: 3,
@@ -42,6 +44,7 @@ const blogData: Blog[] = [
     },
     tags: ["Excel AI Tips"],
     publishDate: "2025",
+    slugTitle:''
   },
 ];
 export default blogData;

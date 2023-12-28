@@ -4,8 +4,6 @@ import Link from "next/link";
 const SignupPage = () => {
   const handleSubmit=(e:any)=>{
     e.preventDefault()
-console.log("REACT_APP_IMAGE_UPLOAD_BASE_URL",process.env.REACT_APP_IMAGE_UPLOAD_BASE_URL)
-
   }
   return (
     <>

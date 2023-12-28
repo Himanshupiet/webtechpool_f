@@ -3,6 +3,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
+import { Toaster } from "react-hot-toast";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 
@@ -20,15 +21,19 @@ export default function RootLayout({
       <head />
 
       <body className="dark:bg-black">
+        <StoreProvider>
         <Providers>
           <Header />
+          <Toaster position="top-right" />
           {children}
           <Footer />
           <ScrollToTop />
         </Providers>
+        </StoreProvider>
       </body>
     </html>
   );
 }
 
-import { Providers } from "./providers";
+import { Providers } from "./providers";import StoreProvider from "./storeProvider";
+

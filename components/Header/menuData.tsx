@@ -6,24 +6,32 @@ const menuData: Menu[] = [
     title: "Home",
     path: "/",
     newTab: false,
+    role:['USER','ADMIN'],
+    isAuth:false,
   },
   {
     id: 2,
     title: "About",
     path: "/about",
     newTab: false,
+    role:['USER','ADMIN'],
+    isAuth:false
   },
   {
     id: 3,
     title: "Blog",
     path: "/blog",
     newTab: false,
+    role:['USER','ADMIN'],
+    isAuth:false,
   },
   {
     id: 4,
     title: "Blog Post",
     path: "/editor",
     newTab: false,
+    role:['ADMIN'],
+    isAuth:true,
   },
   // {
   //   id: 3,

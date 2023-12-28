@@ -1,19 +1,33 @@
+"use client"
 import SingleBlog from "@/components/Blog/SingleBlog";
 import blogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import {useAppDispatch, useAppSelector} from "@/lib/hooks";
+import {blogPostAction, selectBlogState} from "@/lib/blog/blogPost";
+import {useEffect, useState} from "react";
+import {BlogConverter} from "@/modals/BlogConverter";
 
 const Blog = () => {
+  const dispatch = useAppDispatch()
+  //const data = useAppSelector(selectBlogState)
+  const [allBlogs, setAllBlogs]= useState([])
+    useEffect(()=>{
+      dispatch(blogPostAction()).then((res)=>{
+        setAllBlogs(res.payload.data.map((item)=>{
+          return new BlogConverter(item)
+        }))
+      })
+    },[])
   return (
     <>
       <Breadcrumb
         pageName="Blogs"
         description="Microsoft Excel, the quintessential spreadsheet software, offers a powerful array of tools and functions that can help you transform raw data into valuable insights. In this blog post, we'll explore some essential tips and techniques for effective data analysis in Excel."
       />
-
       <section className="pt-[120px] pb-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
-            {blogData.map((blog) => (
+            {allBlogs.map((blog) => (
               <div
                 key={blog.id}
                 className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
@@ -22,7 +36,6 @@ const Blog = () => {
               </div>
             ))}
           </div>
-
           <div
             className="wow fadeInUp -mx-4 flex flex-wrap"
             data-wow-delay=".15s"

@@ -4,14 +4,17 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-
+import { useRouter } from "next/navigation";
+import Router from 'next/router'
+import {useAppDispatch, useAppSelector} from "@/lib/hooks";
+import {logout, selectAuthState} from "@/lib/auth/authSlice";
 const Header = () => {
+  const dispatch = useAppDispatch()
+  const {token, user} = useAppSelector(selectAuthState)
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const navbarToggleHandler = () => {
-    setNavbarOpen(!navbarOpen);
-  };
-
+  const router = useRouter();
+  const navbarToggleHandler = () => {setNavbarOpen(!navbarOpen)};
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
   const handleStickyNavbar = () => {
@@ -24,7 +27,6 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
   });
-
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
   const handleSubmenu = (index) => {
@@ -34,7 +36,11 @@ const Header = () => {
       setOpenIndex(index);
     }
   };
-
+  const clickToLogout=()=>{
+    dispatch(logout(token)).unwrap().then((res)=> {
+      router.push('/')
+    })
+  }
   return (
     <>
       <header
@@ -101,7 +107,33 @@ const Header = () => {
                       : "invisible top-[120%] opacity-0"
                   }`}
                 >
+
                   <ul className="block lg:flex lg:space-x-12">
+                    {menuData.map((menuItem, index) => (
+                      <li key={menuItem.id} className="group relative">
+                        {
+                          token && menuItem.path && (menuItem.isAuth===true || menuItem.isAuth===false) ? (
+                          <Link
+                            href={menuItem.path}
+                            className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
+                          >
+                            {menuItem.title}
+                          </Link>
+                          ) 
+                          : menuItem.path && menuItem.isAuth===false ? (
+                              <Link
+                                href={menuItem.path}
+                                className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
+                              >
+                                {menuItem.title}
+                              </Link>
+                          )
+                          :<></>
+                        }
+                      </li>
+                    ))}
+                  </ul>
+                  {/* <ul className="block lg:flex lg:space-x-12">
                     {menuData.map((menuItem, index) => (
                       <li key={menuItem.id} className="group relative">
                         {menuItem.path ? (
@@ -134,34 +166,40 @@ const Header = () => {
                             >
                               {menuItem.submenu.map((submenuItem) => (
                                 <Link
-                                  href={submenuItem.path}
-                                  key={submenuItem.id}
-                                  className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
-                                >
-                                  {submenuItem.title}
-                                </Link>
+                              href={menuItem.path}
+                              className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
+                            >
+                              {menuItem.title}
+                            </Link>
                               ))}
                             </div>
                           </>
                         )}
                       </li>
                     ))}
-                  </ul>
+                  </ul> */}
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
-                  href="/signin"
+                {user?
+                  <span  onClick={clickToLogout}
+                  style={{cursor: 'pointer'}}
                   className="hidden py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link>
-                <Link
+                  >Logout</span>
+                  :<Link
+                    href="/signin"
+                    className="hidden py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white md:block"
+                  >
+                    Sign In
+                  </Link>
+                }
+            
+                {/* <Link
                   href="/signup"
                   className="ease-in-up hidden rounded-md bg-primary py-3 px-8 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   Sign Up
-                </Link>
+                </Link> */}
                 <div>
                   <ThemeToggler />
                 </div>

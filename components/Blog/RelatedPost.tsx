@@ -6,11 +6,13 @@ const RelatedPost = ({
   slug,
   title,
   date,
+  sizes
 }: {
   image: string;
   slug: string;
   title: string;
   date: string;
+  sizes:string
 }) => {
   return (
     <div className="flex items-center lg:block xl:flex">
