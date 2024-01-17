@@ -1,8 +1,10 @@
-/** @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  // experimental: {
+  //   appDir: true,
+  // },
   images: {
     remotePatterns: [
       {
@@ -12,7 +14,7 @@ const nextConfig = {
         pathname: '/dx7oism2m/image/upload/**',
       },
     ],
-  },
-};
-
-module.exports = nextConfig;
+  }
+}
+ 
+module.exports = nextConfig

@@ -1,10 +1,13 @@
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
+import {Suspense} from "react";
+import Loading from "./loading";
 
 const BlogDetailsPage = () => {
   return (
     <>
+    <Suspense fallback={<Loading/>}>
       <section className="pt-[150px] pb-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
@@ -333,6 +336,7 @@ const BlogDetailsPage = () => {
           </div>
         </div>
       </section>
+      </Suspense>
     </>
   );
 };

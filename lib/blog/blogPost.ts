@@ -53,20 +53,20 @@ export const getBlogById = createAsyncThunk(
 // );
 
 export const blogSlice = createSlice({
-    name: "blogs",
+    name: "blog",
     initialState,
     reducers: {},
     extraReducers: (builder) => {
-      // Add reducers for additional action types here, and handle loading state as needed
-    //   builder.addCase(logout.fulfilled, (state, action) => {
-    //     // Add user to the state array
-    //     return initialState;
-    //   })
+      //Add reducers for additional action types here, and handle loading state as needed
+      builder.addCase(getBlogById.fulfilled, (state, action) => {
+        //console.log("action.payloadaction.payload", action.payload)
+        // Add user to the state array
+        state.blogData = action.payload.data;
+      })
     },
   });
   
   // export const { selectBlogState } = blogSlice.actions;
   
-  export const selectBlogState = (state: RootState) => state.blog
-  
+  export const selectBlogState = (state: RootState) => state.blog 
   export default blogSlice.reducer;

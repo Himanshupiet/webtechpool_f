@@ -1,10 +1,10 @@
 "use client"
 import SingleBlog from "@/components/Blog/SingleBlog";
-import blogData from "@/components/Blog/blogData";
+//import blogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import {useAppDispatch, useAppSelector} from "@/lib/hooks";
 import {blogPostAction, selectBlogState} from "@/lib/blog/blogPost";
-import {useEffect, useState} from "react";
+import {Suspense, lazy, useEffect, useState} from "react";
 import {BlogConverter} from "@/modals/BlogConverter";
 
 const Blog = () => {
@@ -13,7 +13,7 @@ const Blog = () => {
   const [allBlogs, setAllBlogs]= useState([])
     useEffect(()=>{
       dispatch(blogPostAction()).then((res)=>{
-        setAllBlogs(res.payload.data.map((item)=>{
+        setAllBlogs(res.payload.data.map((item:any)=>{
           return new BlogConverter(item)
         }))
       })
