@@ -20,6 +20,28 @@ export const metadata: Metadata = {
   title: 'WebTechPool',
   description: 'This websites provide a wide range of tips and tricks to help users work more efficiently with Excel-AI. These can include keyboard shortcuts, time-saving functions, and techniques for common tasks',
   keywords:"best java development company, offshore software developer India, web application development, web app development company India, web app developer,top block chain development companies India,",
+  metadataBase: new URL('https://www.webtechpool.com'),
+  openGraph: {
+    title: 'WebTechPool',
+    description: 'This websites provide a wide range of tips and tricks to help users work more efficiently with Excel-AI. These can include keyboard shortcuts, time-saving functions, and techniques for common tasks',
+    url: 'https://www.webtechpool.com',
+    siteName: 'Webtechpool',
+    images: [
+      {
+        url: 'https://www.webtechpool.com/images/logo192.ico', // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://www.webtechpool.com/images/logo192.ico', // Must be an absolute URL
+        width: 1800,
+        height: 1600,
+        alt: 'webtechpool',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
   //image_url:"/images/logo/rsz_webtechpool_logo_anshu_kumarcrop.png"
   
 }

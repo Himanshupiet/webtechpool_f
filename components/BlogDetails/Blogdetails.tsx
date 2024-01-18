@@ -26,9 +26,16 @@ const correctULTagFromQuill =  (inputString:string) => {
 const BlogSidebarPage = async() => {
   let pathname = usePathname()
   const [ loading, setLoading] = useState(true)
-  console.log("pathnamepathname", pathname.split("/")[2])
+  //console.log("pathnamepathname", pathname.split("/")[2])
   const dispatch = useAppDispatch()
   const [ blogDetails, setBlogDetails] = useState<any>()
+  const jsonLd = {
+    '@context': 'https://webtechool.com',
+    '@type': 'Blog',
+    name: blogDetails?.title,
+    image: blogDetails?.bannerImageUrl,
+    description: blogDetails?.blogMetaTag,
+  }
   useEffect(() => {
       if(pathname && pathname.split("/")[2]){
         dispatch(getBlogById(pathname.split("/")[2])).unwrap().then((res:any)=>{
@@ -55,6 +62,10 @@ const BlogSidebarPage = async() => {
           <div className="container">
             <div className="-mx-4 flex flex-wrap">
               <div className="w-full px-4 lg:w-8/12">
+              <script
+                  type="application/ld+json"
+                  dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
                 <div>
                   <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
                   {blogDetails?.title}
