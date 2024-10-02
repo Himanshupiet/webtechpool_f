@@ -20,6 +20,7 @@ export async function generateMetadata(
     authors: [{ name: 'Anshu' }, { name: 'Anshu', url: 'https://webtechpool.com' }],
     creator: 'Anshu',
     publisher: 'webtechool.com',
+    bookmarks: [`https://www.webtechpool.com/blog/${product?.data?.data?.slugTitle}`],
     formatDetection: {
       email: false,
       address: false,

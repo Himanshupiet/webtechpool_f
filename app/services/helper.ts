@@ -12,7 +12,8 @@ export const  encryptAES = (text:string) => {
 
 
 export const uploadFile =
-  async (file: File | string) => {
+  async ({ file, token }: { file: File | Blob, token: string }) => {
+    console.log("tokennnnnnnnnn", token)
     const url = `${UPLOAD_IMAGE_URL}admin/uploadImage`;
     const formData = new FormData();
     formData.append('file', file)
@@ -20,6 +21,7 @@ export const uploadFile =
     const config = {
       headers: {
         'Content-Type':"multipart/form-data",
+        'Authorization': JSON.stringify(token) 
       }
     };
     const response = await axios.post(url, formData, config);

@@ -33,7 +33,7 @@ const EditorPage = ()=> {
   //const [blogTags, setBlogTags]= useState([])
   const [loading, setLoading]= useState(false)
   const [fileError, setFileError] = useState<boolean>(false);
-  const [file, setFile] = useState<File | string>("");
+  const [file, setFile] = useState<File | Blob>();
   const [error, setError] = useState<string>("");
 
   const FormikForm = useFormik({
@@ -60,38 +60,45 @@ const EditorPage = ()=> {
           return false;
       };
       setLoading(true)
-      uploadFile(file)
-      .then(async(imageUrl: string) => {
-        data['bannerImageUrl'] = imageUrl
-        let options = SETTING.HEADER_PARAMETERS;
-        options['Authorization'] = JSON.stringify(token)
-        // incase case of file and Data both send
-        // let formData = new FormData();
-        //     formData.append("blogRequest", JSON.stringify(data))
-        //     formData.append("image", file);
-        //     formData.append("image", file);
-        //options['Content-Type']= "multipart/form-data"
-        await Axios.post(SETTING.APP_CONSTANT.API_URL+`admin/addBlogPost`,data,{headers: options})
-        .then((res) => {
+    
+        try {
+          const uploadedImageUrl = await uploadFile({ file, token });
+          console.log("File uploaded successfully:", uploadedImageUrl);
+          // You can now use the uploadedImageUrl (e.g., set it in state)
+          data['bannerImageUrl'] = uploadedImageUrl
+          let options = SETTING.HEADER_PARAMETERS;
+          options['Authorization'] = JSON.stringify(token)
+          // incase case of file and Data both send
+          // let formData = new FormData();
+          //     formData.append("blogRequest", JSON.stringify(data))
+          //     formData.append("image", file);
+          //     formData.append("image", file);
+          //options['Content-Type']= "multipart/form-data"
+          await Axios.post(SETTING.APP_CONSTANT.API_URL+`admin/addBlogPost`,data,{headers: options})
+          .then((res) => {
+            setLoading(false)
+            if (res && res.data.success) {
+              toast.success(res.data.message);
+              router.push('/blog')
+            } else {
+              toast["error"](res.data.message);
+            }
+          })
+          .catch((err) =>{
+            setLoading(false)
+            if(err && err.response && err.response.status===401){
+              dispatch(ExpireToken()) 
+              toast.error('Token expired.');
+            }else{
+              const errorMessage= err && err.response && err.response.data && err.response.data.message?err.response.data.message :`Error while posting blog.`
+              toast["error"](errorMessage);
+            }
+          })
+        } catch (error) {
           setLoading(false)
-          if (res && res.data.success) {
-            toast.success(res.data.message);
-            router.push('/blog')
-          } else {
-            toast["error"](res.data.message);
-          }
-        })
-        .catch((err) =>{
-          setLoading(false)
-          if(err && err.response && err.response.status===401){
-            dispatch(ExpireToken()) 
-            toast.error('Token expired.');
-          }else{
-            const errorMessage= err && err.response && err.response.data && err.response.data.message?err.response.data.message :`Error while posting blog.`
-            toast["error"](errorMessage);
-          }
-        })
-       })
+          console.error("Error during file upload:", error);
+          toast["error"](error.message?error.message:'Error during file upload')
+        }
     },
   });
 

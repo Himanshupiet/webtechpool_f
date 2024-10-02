@@ -49,4 +49,9 @@ module.exports = {
     },
   },
   plugins: [],
+  safelist: [
+    'bg-amber-700',
+    'bg-emerald-700',
+    'bg-red-700',
+  ],
 };

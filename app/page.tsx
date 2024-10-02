@@ -28,16 +28,16 @@ export const metadata: Metadata = {
     siteName: 'Webtechpool',
     images: [
       {
-        url: 'https://www.webtechpool.com/images/logo192.ico', // Must be an absolute URL
+        url: '/images/logo192.ico', // Must be an absolute URL
         width: 800,
         height: 600,
       },
-      {
-        url: 'https://www.webtechpool.com/images/logo192.ico', // Must be an absolute URL
-        width: 1800,
-        height: 1600,
-        alt: 'webtechpool',
-      },
+      // {
+      //   url: '/images/logo192.ico', // Must be an absolute URL
+      //   width: 1800,
+      //   height: 1600,
+      //   alt: 'webtechpool',
+      // },
     ],
     locale: 'en_US',
     type: 'website',
